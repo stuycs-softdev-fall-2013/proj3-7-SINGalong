@@ -5,8 +5,8 @@ Members:
 --------
 - Sabrina Khan, Glorious Leader
 - Maia Ezratty
-- Christine Xu
-- Noah Rosenberg
+- Christine Xu, making things pretty
+- Noah Rosenberg, middleware and Facebook app integration
 
 Project:
 --------
