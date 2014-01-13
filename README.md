@@ -3,10 +3,10 @@ SINGalong
 
 Members:
 --------
-Sabrina Khan, Glorious Leader
-Maia Ezratty
-Christine Xu
-Noah Rosenberg
+- Sabrina Khan, Glorious Leader
+- Maia Ezratty
+- Christine Xu
+- Noah Rosenberg
 
 Project:
 --------
