@@ -4,6 +4,12 @@ from flask import render_template, session, request, redirect, url_for
 app = Flask(__name__)
 
 @app.route('/')
+def login():
+    if login = True:
+        redirect("/loggedin")
+    else return render_template("Login.html")
+
+@app.route("/loggedin")
 def home():
     return render_template('index.html')
 	
