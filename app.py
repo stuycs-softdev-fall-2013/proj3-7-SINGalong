@@ -5,9 +5,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def login():
-    if login = True:
+    if login == True:
         redirect("/loggedin")
-    else return render_template("Login.html")
+    else: 
+        return render_template("Login.html")
 
 @app.route("/loggedin")
 def home():
