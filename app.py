@@ -2,17 +2,24 @@ from flask import Flask
 from flask import render_template, session, request, redirect, url_for
 
 app = Flask(__name__)
+app.secret_key = "SINGalong"
+_loggedin = False
 
-@app.route('/')
+@app.route('/',methods=["POST","GET"])
 def login():
-    if login == True:
-        redirect("/loggedin")
-    else: 
+    if request.method == "GET":
         return render_template("Login.html")
+    if request.method == "POST":
+        #checking login stuff
+        return redirect(url_for("home"));
 
-@app.route("/loggedin")
+
+@app.route("/home", methods = ["POST","GET"])
 def home():
-    return render_template('index.html')
+    if request.method == "GET":
+        return render_template('Home.html')
+    
+    
 	
 	
 @app.route('/AboutUs')
