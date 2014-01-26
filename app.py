@@ -1,3 +1,4 @@
+
 from flask import Flask
 from flask import render_template, session, request, redirect, url_for
 
@@ -11,22 +12,32 @@ def login():
         return render_template("Login.html")
     if request.method == "POST":
         #checking login stuff
-        return redirect(url_for("home"));
+        return redirect(url_for("Home.html"));
 
+@app.route("/Home", methods = ["POST","GET"])
+def Home():
+    if request.method == "GET":
+        return render_template('Home.html')
 @app.route('/AboutUs', methods = ["POST", "GET"])
+
 def AboutUs():
     if request.method == "GET":
         return render_template('AboutUs.html')
-		
 @app.route('/Contact', methods = ["POST", "GET"])
+
 def Contact():
-    if request.method == "GET":
-        return render_template('Contact.html')
-		
+	if request.method == "GET":
+		return render_template('Contact.html')
 @app.route('/Rules', methods = ["POST", "GET"])
 def Rules():
-    if request.method == "GET":
-        return render_template('Rules.html')
+	if request.method == "GET":
+		return render_template('Rules.html')
+
+@app.route('/Calandar', methods = ["POST", "GET"])
+
+def Calandar():
+	if request.method == "GET":
+		return render_template('Calandar.html')
 
 if __name__=="__main__":
     app.debug=True
