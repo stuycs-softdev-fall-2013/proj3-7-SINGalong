@@ -13,22 +13,17 @@ def login():
         #checking login stuff
         return redirect(url_for("home"));
 
-@app.route("/", methods = ["POST","GET"])
-def Home():
-    if request.method == "GET":
-        return render_template('Home.html')
-
 @app.route('/AboutUs', methods = ["POST", "GET"])
 def AboutUs():
     if request.method == "GET":
         return render_template('AboutUs.html')
 		
-app.route('/Contact', methods = ["POST", "GET"])
+@app.route('/Contact', methods = ["POST", "GET"])
 def Contact():
     if request.method == "GET":
         return render_template('Contact.html')
 		
-app.route('/Rules', methods = ["POST", "GET"])
+@app.route('/Rules', methods = ["POST", "GET"])
 def Rules():
     if request.method == "GET":
         return render_template('Rules.html')
