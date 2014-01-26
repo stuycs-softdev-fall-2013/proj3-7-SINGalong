@@ -18,6 +18,8 @@ def login():
 def home():
     if request.method == "GET":
         return render_template('Home.html')
+    if request.method == "POST":
+        
     
     
 	
