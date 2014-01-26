@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.secret_key = "SINGalong"
 _loggedin = False
 
-@app.route('/',methods=["POST","GET"])
+@app.route('/login',methods=["POST","GET"])
 def login():
     if request.method == "GET":
         return render_template("Login.html")
