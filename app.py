@@ -37,7 +37,7 @@ def Calendar():
 @app.route('/Contemporary', methods = ["POST", "GET"])
 def Contemporary():
 	if request.method == "GET":
-		return render_template('contemp..html')
+		return render_template('contemp.html')
 
 if __name__=="__main__":
     app.debug=True
