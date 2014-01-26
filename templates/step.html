@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<link rel="stylesheet" href="/static/css/bootstrap.css">
+	<link rel="stylesheet" href="/static/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/static/css/bootswatch.css">
+	<link rel="stylesheet" href="/static/css/variables.css">
+
+	<header class="banner" role="banner">
+     
+     <img src="/static/images/header.jpg"/600x75>
+
+	</header>
+</head>
+
+ <body>
+	{% include "navbar.html" %}
+<h1> STEP </h1>
+
+<h2>
+Directors:
+Mehak Bauss
+Megan Wilson
+<br>
+<br>
+Members:
+<form method = "post">
+<input type= "text" name = "member" placeholder = "First name, Last name"> </br>  
+<button type="submit" class="btn btn-default">Add a Member</button>
+</form>
+<br>
+
+Add A Video:
+
+<input type= "url" name = "vid" placeholder = "Enter url here"> </br>
+
+<iframe width="420" height="345"
+src= "vid" >
+</iframe>
+
+</h2>
+</body>
+  
+  
+</html>
