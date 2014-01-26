@@ -13,20 +13,16 @@ def login():
         #checking login stuff
         return redirect(url_for("home"));
 
-
-@app.route("/home", methods = ["POST","GET"])
-def home():
+@app.route("/Home", methods = ["POST","GET"])
+def Home():
     if request.method == "GET":
         return render_template('Home.html')
-    if request.method == "POST":
-        
-    
-    
-	
-	
-@app.route('/AboutUs')
+
+@app.route('/AboutUs', methods = ["POST", "GET"])
 def AboutUs():
-    return render_template('AboutUs.html')
+    if request.method == "GET":
+        return render_template('AboutUs.html')
+
 
 if __name__=="__main__":
     app.debug=True
