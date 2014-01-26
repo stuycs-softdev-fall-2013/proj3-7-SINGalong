@@ -12,12 +12,7 @@ def login():
         return render_template("Login.html")
     if request.method == "POST":
         #checking login stuff
-        return redirect(url_for("/Home"));
-
-@app.route("/Home", methods = ["POST","GET"])
-def Home():
-    if request.method == "GET":
-        return render_template('Home.html')
+        return redirect(url_for("/AboutUs"));
 
 @app.route('/AboutUs', methods = ["POST", "GET"])
 def AboutUs():
@@ -38,6 +33,11 @@ def Rules():
 def Calendar():
 	if request.method == "GET":
 		return render_template('Calendar.html')
+
+@app.route('/Contemporary', methods = ["POST", "GET"])
+def Contemporary():
+	if request.method == "GET":
+		return render_template('contemp..html')
 
 if __name__=="__main__":
     app.debug=True
