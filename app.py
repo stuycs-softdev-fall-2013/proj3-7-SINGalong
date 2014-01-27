@@ -1,10 +1,12 @@
 
 from flask import Flask
 from flask import render_template, session, request, redirect, url_for
+#import members
 
 app = Flask(__name__)
 app.secret_key = "SINGalong"
 _loggedin = False
+_link = ""
 
 @app.route('/',methods=["POST","GET"])
 def login():
@@ -88,6 +90,12 @@ def Cast():
 def Costumes():
 	if request.method == "GET":
 		return render_template('costumes.html')
+        if request.method == "POST":
+            if request.form['btn']:
+                global _link
+                _link = request.form['btn']
+                return redirect(url_for("members"))
+
 
 @app.route('/Band', methods = ["POST", "GET"])
 def Band():
