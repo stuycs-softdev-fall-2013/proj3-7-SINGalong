@@ -35,10 +35,36 @@ def Calendar():
 	if request.method == "GET":
 		return render_template('Calendar.html')
 
-@app.route('/Contemporary', methods = ["POST", "GET"])
-def Contemporary():
+@app.route('/belly', methods = ["POST", "GET"])
+def Belly():
 	if request.method == "GET":
-		return render_template('contemp.html')
+		return render_template('belly.html')		
+
+@app.route('/boyshiphop', methods = ["POST", "GET"])
+def BoysHH():
+	if request.method == "GET":
+		return render_template('boyshiphop.html')
+
+@app.route('/girlshiphop', methods = ["POST", "GET"])
+def Girlshiphop():
+	if request.method == "GET":
+		return render_template('girlshiphop.html')		
+
+@app.route('/step', methods = ["POST", "GET"])
+def Step():
+	if request.method == "GET":
+		return render_template('step.html')
+		
+@app.route('/latin', methods = ["POST", "GET"])
+def Latin():
+	if request.method == "GET":
+		return render_template('latin.html')
+
+@app.route('/rave', methods = ["POST", "GET"])
+def Rave():
+	if request.method == "GET":
+		return render_template('rave.html')
+
 
 if __name__=="__main__":
     app.debug=True
