@@ -8,8 +8,10 @@ client = MongoClient()
 members = client.db.members
 #members.remove() 
 
-def addMember(name):
-    db.members.insert({'name': name, 'crew':crew})
+def removeMember(member = ""):
+    if member != "":
+        if members.find({"Member":member}).count() != 0:
+            posts.remove({"Title":title})
 
 def removeMember(name):
     db.members.remove({'name': name})

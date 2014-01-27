@@ -88,6 +88,12 @@ def Cast():
 def Costumes():
 	if request.method == "GET":
 		return render_template('costumes.html')
+        if request.method == "POST":
+            if request.form['btn']:
+                global _link
+                _link = request.form['btn']
+                return redirect(url_for("member"))
+
 
 @app.route('/Band', methods = ["POST", "GET"])
 def Band():
