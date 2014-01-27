@@ -7,7 +7,7 @@ members.remove()
 def removeMember(member = ""):
     if member != "":
         if members.find({"Member":member}).count() != 0:
-            posts.remove({"Title":title})
+            posts.remove({"Member":member})
 
 def addMember(name):
     if members.find({"Member":member}).count() == 0:
