@@ -39,7 +39,7 @@ def Calendar():
 	if request.method == "GET":
 		return render_template('Calendar.html')
 
-@app.route('/belly', methods = ["POST", "GET"])
+@app.route('/Belly', methods = ["POST", "GET"])
 def Belly():
 	if request.method == "GET":
 		return render_template('belly.html')		
@@ -54,22 +54,22 @@ def Contemp():
 	if request.method == "GET":
 		return render_template('contemp.html')
 
-@app.route('/girlshiphop', methods = ["POST", "GET"])
+@app.route('/Girlshiphop', methods = ["POST", "GET"])
 def Girlshiphop():
 	if request.method == "GET":
 		return render_template('girlshiphop.html')		
 
-@app.route('/step', methods = ["POST", "GET"])
+@app.route('/Step', methods = ["POST", "GET"])
 def Step():
 	if request.method == "GET":
 		return render_template('step.html')
 		
-@app.route('/latin', methods = ["POST", "GET"])
+@app.route('/Latin', methods = ["POST", "GET"])
 def Latin():
 	if request.method == "GET":
 		return render_template('latin.html')
 
-@app.route('/rave', methods = ["POST", "GET"])
+@app.route('/Rave', methods = ["POST", "GET"])
 def Rave():
 	if request.method == "GET":
 		return render_template('rave.html')
@@ -104,7 +104,7 @@ def Tech():
 	if request.method == "GET":
 		return render_template('tech.html')
 
-@app.route('/Sound and Lights', methods = ["POST", "GET"])
+@app.route('/SoundandLights', methods = ["POST", "GET"])
 def SoundLights():
 	if request.method == "GET":
 		return render_template('soundlights.html')
