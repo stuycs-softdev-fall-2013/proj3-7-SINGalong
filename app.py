@@ -6,6 +6,7 @@ import members
 app = Flask(__name__)
 app.secret_key = "SINGalong"
 _loggedin = False
+_link = ""
 
 @app.route('/',methods=["POST","GET"])
 def login():
