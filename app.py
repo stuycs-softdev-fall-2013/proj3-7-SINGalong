@@ -79,6 +79,41 @@ def Props():
 	if request.method == "GET":
 		return render_template('props.html')
 
+@app.route('/Cast', methods = ["POST", "GET"])
+def Cast():
+	if request.method == "GET":
+		return render_template('cast.html')
+
+@app.route('/Costumes', methods = ["POST", "GET"])
+def Costumes():
+	if request.method == "GET":
+		return render_template('costumes.html')
+
+@app.route('/Band', methods = ["POST", "GET"])
+def Band():
+	if request.method == "GET":
+		return render_template('band.html')
+
+@app.route('/Art', methods = ["POST", "GET"])
+def Art():
+	if request.method == "GET":
+		return render_template('art.html')
+
+@app.route('/Tech', methods = ["POST", "GET"])
+def Tech():
+	if request.method == "GET":
+		return render_template('tech.html')
+
+@app.route('/Sound and Lights', methods = ["POST", "GET"])
+def SoundLights():
+	if request.method == "GET":
+		return render_template('soundlights.html')
+
+@app.route('/Chorus', methods = ["POST", "GET"])
+def Chorus():
+	if request.method == "GET":
+		return render_template('chorus.html')
+
 
 if __name__=="__main__":
     app.debug=True
