@@ -44,7 +44,7 @@ def Belly():
 	if request.method == "GET":
 		return render_template('belly.html')		
 
-@app.route('/boyshiphop', methods = ["POST", "GET"])
+@app.route('/Boyshiphop', methods = ["POST", "GET"])
 def BoysHH():
 	if request.method == "GET":
 		return render_template('boyshiphop.html')
