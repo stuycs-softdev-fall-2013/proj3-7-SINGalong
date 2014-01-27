@@ -14,6 +14,11 @@ def login():
     if request.method == "POST":
         #checking login stuff
         return redirect(url_for("/AboutUs"));
+		
+@app.route('/Home', methods = ["POST", "GET"])
+def Home():
+    if request.method == "GET":
+        return render_template('Home.html')
 
 @app.route('/AboutUs', methods = ["POST", "GET"])
 def AboutUs():
