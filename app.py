@@ -94,7 +94,7 @@ def Costumes():
             if request.form['btn']:
                 global _link
                 _link = request.form['btn']
-                return redirect(url_for("member"))
+                return redirect(url_for("members"))
 
 
 @app.route('/Band', methods = ["POST", "GET"])
