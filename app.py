@@ -29,10 +29,10 @@ def Contact():
 	if request.method == "GET":
 		return render_template('Contact.html')
 
-@app.route('/Rules', methods = ["POST", "GET"])
+@app.route('/Crews', methods = ["POST", "GET"])
 def Rules():
 	if request.method == "GET":
-		return render_template('Rules.html')
+		return render_template('Crews.html')
 
 @app.route('/Calendar', methods = ["POST", "GET"])
 def Calendar():
