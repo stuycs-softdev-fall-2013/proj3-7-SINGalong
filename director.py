@@ -6,10 +6,10 @@ db.authenticate('softdev','softdev')
 
 client = MongoClient()
 directors = client.db.directors
-directors.remove()
+#directors.remove() what is this for?
 
-def addDirector(name):
-    db.directors.insert({'name': name})
+def addDirector(name, crew):
+    db.directors.insert({'name': name, 'crew':crew})
 
 def removeDirector(name):
     db.directors.remove({'name': name})

@@ -5,7 +5,7 @@
 	<link rel="stylesheet" href="/static/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/static/css/bootswatch.css">
 	<link rel="stylesheet" href="/static/css/variables.css">
-
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<header class="banner" role="banner">
      
      <img src="/static/images/header.jpg"/600x75>
@@ -15,9 +15,25 @@
 </head>
 
 <body>
-  <script src="/static/js/FB.js"</script>
 <div id="fb-root"></div>
-<fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : 495497093900038,
+          status     : true,
+          xfbml      : true
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/all.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+  </script>
+<div class="fb-login-button" data-width="200" data-height="50" data-max-rows="2" data-show-faces="true"></div>
 </body>
 
 </html>
