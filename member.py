@@ -12,4 +12,4 @@ def addMember(name):
     db.members.insert({'name': name})
 
 def removeMember(name):
-    db.members.update({'name': name})
+    db.members.remove({'name': name})

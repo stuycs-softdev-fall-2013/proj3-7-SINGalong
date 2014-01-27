@@ -12,4 +12,4 @@ def addDirector(name):
     db.directors.insert({'name': name})
 
 def removeDirector(name):
-    db.directors.update({'name': name})
+    db.directors.remove({'name': name})
