@@ -74,6 +74,11 @@ def Rave():
 	if request.method == "GET":
 		return render_template('rave.html')
 
+@app.route('/Props', methods = ["POST", "GET"])
+def Props():
+	if request.method == "GET":
+		return render_template('props.html')
+
 
 if __name__=="__main__":
     app.debug=True
