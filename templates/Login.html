@@ -16,6 +16,8 @@
 
 <body>
 <div id="fb-root"></div>
+
+<script type="text/javascript" src="https://connect.facebook.net/en_us/all.js"></script>
     <script>
       window.fbAsyncInit = function() {
         FB.init({
@@ -23,17 +25,44 @@
           status     : true,
           xfbml      : true
         });
+      FB.login(function(d) {
+        window.location = './Home';
+        console.log(d);
+        });
+
+      FB.getLoginStatus(function(d){
+        if(d.status === 'connected'){
+          window.location = './Home';
+      }});
       };
 
       (function(d, s, id){
          var js, fjs = d.getElementsByTagName(s)[0];
          if (d.getElementById(id)) {return;}
          js = d.createElement(s); js.id = id;
-         js.src = "//connect.facebook.net/en_US/all.js";
+         js.src = "http://connect.facebook.net/en_US/all.js";
          fjs.parentNode.insertBefore(js, fjs);
+
+
+      
        }(document, 'script', 'facebook-jssdk'));
+
+
+
+
+      
+      
   </script>
-<div class="fb-login-button" data-width="200" data-height="50" data-max-rows="2" data-show-faces="true"></div>
+<div style="padding-left:50px">
+<br><br>
+<div class="fb-login-button" data-width="200" data-height="50" data-max-rows="2" data-show-faces="true" id="login">
+
+</div>
+<br><br>
+<input type="button" value="Logout" onclick="FB.logout();">
+
 </body>
+
+
 
 </html>
