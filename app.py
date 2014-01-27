@@ -49,6 +49,11 @@ def BoysHH():
 	if request.method == "GET":
 		return render_template('boyshiphop.html')
 
+@app.route('/Contemporary', methods = ["POST", "GET"])
+def Contemp():
+	if request.method == "GET":
+		return render_template('contemp.html')
+
 @app.route('/girlshiphop', methods = ["POST", "GET"])
 def Girlshiphop():
 	if request.method == "GET":
