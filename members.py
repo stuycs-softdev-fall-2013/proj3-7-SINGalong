@@ -3,7 +3,6 @@ from time import strftime
 
 client = MongoClient()
 members = client.db.members
-members.remove();
 
 def removeMember(member = ""):
     if member != "":
