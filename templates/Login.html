@@ -15,10 +15,20 @@
 </head>
 
 <body>
+
 <div id="fb-root"></div>
 
-<script type="text/javascript" src="https://connect.facebook.net/en_us/all.js"></script>
-    <script>
+<div style="padding-left:50px">
+
+<br><br>
+
+<div class="fb-login-button" data-width="200" data-height="50" data-max-rows="2" data-show-faces="true" id="login">
+
+</div>
+
+<br><br>
+
+<script type="text/javascript" src="https://connect.facebook.net/en_us/all.js">
       window.fbAsyncInit = function() {
         FB.init({
           appId      : 495497093900038,
@@ -43,23 +53,9 @@
          js.src = "http://connect.facebook.net/en_US/all.js";
          fjs.parentNode.insertBefore(js, fjs);
 
-
-      
        }(document, 'script', 'facebook-jssdk'));
+</script>
 
-
-
-
-      
-      
-  </script>
-<div style="padding-left:50px">
-<br><br>
-<div class="fb-login-button" data-width="200" data-height="50" data-max-rows="2" data-show-faces="true" id="login">
-
-</div>
-<br><br>
-<input type="button" value="Logout" onclick="FB.logout();">
 
 </body>
 
