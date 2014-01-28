@@ -95,7 +95,7 @@ def Costumes():
             t = strftime("%X %x")
             if not posts.write(m,t):
                 return render_template('costumes.html')
-            return redirect(url_for("Home"))
+            return redirect(url_for("/Home"))
             
 
 
