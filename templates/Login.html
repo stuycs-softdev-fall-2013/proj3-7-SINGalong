@@ -1,22 +1,7 @@
 <html>
-
-<head>
-	<link rel="stylesheet" href="/static/css/bootstrap.css">
-	<link rel="stylesheet" href="/static/css/bootstrap.min.css">
-	<link rel="stylesheet" href="/static/css/bootswatch.css">
-	<link rel="stylesheet" href="/static/css/variables.css">
-	<header class="banner" role="banner">
-     <script type="text/javascript" src="https://connect.facebook.net/en_us/all.js"></script>
-     <img src="/static/images/header.jpg"/600x75>
-
-	</header>
-
-</head>
-
+{% include "header.html" %}
 <body>
-
-
-
+ {% include "navbar.html" %}
 
 <div id="fb-root"></div>
 
@@ -49,9 +34,9 @@
 </script>
 <br><br>
 
-<div style="padding-left:50px">
+<div style="container">
 
-<div class="fb-login-button" data-width="300" data-height="100" data-max-rows="2" data-show-faces="true" id="login">
+<div class="fb-login-button" data-width="350" data-height="150" data-max-rows="2" data-show-faces="true" id="login">
 
 </div>
 <br><br>
