@@ -92,10 +92,8 @@ def Costumes():
         if request.method == "POST":
             m = request.form["member"]
             d = request.form["director"]
-            t = strftime("%X %x")
-            if not posts.write(m,t):
-                return render_template('costumes.html')
-            return redirect(url_for("/Home"))
+            addMember(m)
+            return render_template('costumes.html')
             
 
 
