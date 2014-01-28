@@ -1,7 +1,7 @@
 
 from flask import Flask
 from flask import render_template, session, request, redirect, url_for
-#import members
+import members
 
 app = Flask(__name__)
 app.secret_key = "SINGalong"
@@ -13,7 +13,6 @@ def login():
     if request.method == "GET":
         return render_template("Login.html")
     if request.method == "POST":
-        #checking login stuff
         return redirect(url_for("/AboutUs"));
 		
 @app.route('/Home', methods = ["POST", "GET"])
@@ -91,10 +90,13 @@ def Costumes():
 	if request.method == "GET":
 		return render_template('costumes.html')
         if request.method == "POST":
-            if request.form['btn']:
-                global _link
-                _link = request.form['btn']
-                return redirect(url_for("members"))
+            m = request.form["member"]
+            d = request.form["director"]
+            t = strftime("%X %x")
+            if not posts.write(m,t):
+                return render_template('costumes.html')
+            return redirect(url_for("Home"))
+            
 
 
 @app.route('/Band', methods = ["POST", "GET"])
