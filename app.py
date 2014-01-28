@@ -13,7 +13,7 @@ def login():
     if request.method == "GET":
         return render_template("Login.html")
     if request.method == "POST":
-        return redirect(url_for("/AboutUs"));
+        return redirect(url_for("/Home"));
 		
 @app.route('/Home', methods = ["POST", "GET"])
 def Home():
