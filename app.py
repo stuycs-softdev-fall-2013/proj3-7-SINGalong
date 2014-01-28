@@ -92,8 +92,9 @@ def Costumes():
         if request.method == "POST":
             m = request.form["member"]
             d = request.form["director"]
-            members.addMember(m,"costumes")
-            return render_template('costumes.html', 
+            if (d == ""):
+                members.addMember(m,"costumes")
+                return render_template('costumes.html', 
                                    MEMBERS=members.getMembers("costumes"))
             
 
