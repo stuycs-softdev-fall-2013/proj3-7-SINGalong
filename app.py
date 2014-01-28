@@ -7,20 +7,11 @@ app = Flask(__name__)
 app.secret_key = "SINGalong"
 
 client = MongoClient()
-members = client.db.members
+db = client['members']
+members = db['members']
 
-def removeMember(member, crew):
-    if member != "":
-        if members.find({"Member":member,"Crew":crew}).count() != 0:
-            members.remove({"Member":member,"Crew":crew})
-
-def addMember(member, crew):
-    if member != "":
-        members.insert({"Member":member, "Crew":crew})
-
-
-def getMembers(crew):
-    return ["%(Member)s"%x for x in members.find({"Crew":crew})]
+member = ""
+director = ""
 
 @app.route('/',methods=["POST","GET"])
 def login():
@@ -104,14 +95,9 @@ def Costumes():
 	if request.method == "GET":
 		return render_template('costumes.html')
         if request.method == "POST":
-            m = request.form["member"]
-            d = request.form["director"]
-            if (d == ""):
-                members.addMember(m,"costumes")
-                return render_template('costumes.html', 
-                                   MEMBERS=members.getMembers("costumes"))
-            
-
+            member = str(request.form["member"])
+            director = str(request.form["director"])
+            return render_template('costumes.html')
 
 @app.route('/Band', methods = ["POST", "GET"])
 def Band():
