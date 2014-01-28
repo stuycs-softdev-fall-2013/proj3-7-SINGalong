@@ -1,7 +1,7 @@
 
 from flask import Flask
 from flask import render_template, session, request, redirect, url_for
-#import members
+import members
 
 app = Flask(__name__)
 app.secret_key = "SINGalong"
@@ -92,8 +92,9 @@ def Costumes():
         if request.method == "POST":
             m = request.form["member"]
             d = request.form["director"]
-            addMember(m)
-            return render_template('costumes.html')
+            members.addMember(m,"costumes")
+            return render_template('costumes.html', 
+                                   MEMBERS=members.getMembers("costumes"))
             
 
 
