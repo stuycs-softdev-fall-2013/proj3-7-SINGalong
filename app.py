@@ -1,12 +1,26 @@
 
 from flask import Flask
 from flask import render_template, session, request, redirect, url_for
-#import members
+from pymongo import MongoClient
 
 app = Flask(__name__)
 app.secret_key = "SINGalong"
-_loggedin = False
-_link = ""
+
+client = MongoClient()
+members = client.db.members
+
+def removeMember(member, crew):
+    if member != "":
+        if members.find({"Member":member,"Crew":crew}).count() != 0:
+            members.remove({"Member":member,"Crew":crew})
+
+def addMember(member, crew):
+    if member != "":
+        members.insert({"Member":member, "Crew":crew})
+
+
+def getMembers(crew):
+    return ["%(Member)s"%x for x in members.find({"Crew":crew})]
 
 @app.route('/',methods=["POST","GET"])
 def login():
