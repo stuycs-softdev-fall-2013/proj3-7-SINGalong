@@ -9,25 +9,34 @@
 <div class="container">
 <h1>Props</h1>
 <div class="column">
-          
- <div class="column">
           <form method="POST" >
           <div class="large-6 columns"  id = ""> </div>
             <div class="panel">
               <h3 class="hide-for-small">Director Information<hr/></h3>
-	      <textarea style="width:250px;height:20px;max-width:1040px;" name="director"  ></textarea>
+	      <input style="width:250px;height:20px;max-width:1040px;" name="director">
           <br>
-          <button type="input" class="btn-large btn" name="submit">Add Directors</button>
-            </div>
+	  </div>
+
+	  <div class="panel">
+          <button type="input" class="btn-large btn" name="ad">Add Directors</button>
+          </div>
+	  </form>
+	  {{director}}
 
 	    <br>
 	    <br>
-            
+            <form method = "POST">
             <div class="panel">
               <h3 class="hide-for-small">Members<hr/></h3>
-             <textarea style="width:250px;height:20px;max-width:1040px;" name="member"  ></textarea>
+             <input style="width:250px;height:20px;max-width:1040px;" name="member"  >
              <br>
-             <button type="input" class="btn-large btn" name="submit">Add Members</button>
+	      </div>
+	      <ul>
+	      {{ member }}
+	      </ul>
+	      <div class="panel">
+             <button type="input" class="btn-large btn" name="am">Add Members</button>
+	     <button type="input" class="btn-large btn" name="rm">Remove Members</button>
             </div>
 	    </form>
         </div>
