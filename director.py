@@ -1,15 +1,18 @@
 from pymongo import MongoClient
 
-connection = MongoClient('db.stuycs.org')
-db=connection.admin
-db.authenticate('softdev','softdev')
-
 client = MongoClient()
 directors = client.db.directors
-#directors.remove() what is this for?
 
-def addDirector(name, crew):
-    db.directors.insert({'name': name, 'crew':crew})
+def addDirector(director):
+    directors.insert({"Director":director, "Crew":crew})
 
-def removeDirector(name):
-    db.directors.remove({'name': name})
+def removeDirector(member = ""):
+    if member != "":
+        if members.find({"Member":member}).count() != 0:
+            posts.remove({"Member":member})
+
+def getDirectors(crew):
+    retString = ""
+    for x in directors.find({'Crew':crew}):
+        retString = retString + "<li>%s</li> "%x['Director']
+    return retString
